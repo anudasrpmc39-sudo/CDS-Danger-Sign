@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CDS – Maternal & Newborn Danger Signs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Clinical Decision Support (CDS)</h1>
+    <p class="subtitle">Maternal & Newborn Danger Signs</p>
+
+    <div class="tabs">
+      <button id="maternalTab" class="active">Maternal</button>
+      <button id="newbornTab">Newborn</button>
+    </div>
+
+    <!-- Maternal -->
+    <form id="maternalForm" class="form active">
+      <h2>Maternal Danger Signs</h2>
+
+      <label><input type="checkbox" name="severe_headache"> Severe headache</label>
+      <label><input type="checkbox" name="vision_change"> Vision changes</label>
+      <label><input type="checkbox" name="dizziness"> Dizziness / fainting</label>
+      <label><input type="checkbox" name="fever"> Fever</label>
+      <label><input type="checkbox" name="swelling_face_hands"> Swelling face/hands</label>
+      <label><input type="checkbox" name="breathing_problem"> Breathing difficulty</label>
+      <label><input type="checkbox" name="chest_pain"> Chest pain / fast heartbeat</label>
+      <label><input type="checkbox" name="severe_vomiting"> Severe vomiting</label>
+      <label><input type="checkbox" name="severe_abdominal_pain"> Severe abdominal pain</label>
+      <label><input type="checkbox" name="reduced_fetal_movement"> Reduced fetal movement</label>
+      <label><input type="checkbox" name="vaginal_bleeding"> Vaginal bleeding</label>
+      <label><input type="checkbox" name="postpartum_bleeding"> Postpartum bleeding</label>
+      <label><input type="checkbox" name="leg_pain_swelling"> Leg pain/swelling</label>
+      <label><input type="checkbox" name="harmful_thoughts"> Harmful thoughts</label>
+      <label><input type="checkbox" name="extreme_fatigue"> Extreme fatigue</label>
+
+      <button type="button" onclick="assessMaternal()">Assess</button>
+    </form>
+
+    <!-- Newborn -->
+    <form id="newbornForm" class="form">
+      <h2>Newborn Danger Signs</h2>
+
+      <label><input type="checkbox" name="refuses_breastmilk"> Refuses breastmilk</label>
+      <label><input type="checkbox" name="vomiting_diarrhea"> Vomiting or diarrhea</label>
+      <label><input type="checkbox" name="fever"> Fever</label>
+      <label><input type="checkbox" name="chills"> Chills</label>
+      <label><input type="checkbox" name="convulsions"> Convulsions</label>
+      <label><input type="checkbox" name="difficulty_breathing"> Difficulty breathing</label>
+      <label><input type="checkbox" name="continuous_crying"> Continuous crying</label>
+      <label><input type="checkbox" name="rash"> Rash</label>
+      <label><input type="checkbox" name="coughing_blood"> Coughing blood</label>
+      <label><input type="checkbox" name="jaundice"> Jaundice</label>
+
+      <button type="button" onclick="assessNewborn()">Assess</button>
+    </form>
+
+    <div id="result" class="result hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
